@@ -1,0 +1,13 @@
+name: Bug Report
+description: Report a bug (automatically prioritized on the next cron check)
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened vs. what should happen?
+      description: Include reproduction steps and screenshots if available.
+      placeholder: When tapping X, the app did Y instead of Z.
+    validations:
+      required: true

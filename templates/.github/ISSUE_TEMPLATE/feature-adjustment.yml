@@ -1,0 +1,31 @@
+name: Feature / App Adjustment
+description: Log an idea, adjustment, or enhancement for the next agent batch
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Queue priority
+      description: You can also apply the `urgent` or `draft` GitHub labels directly.
+      options:
+        - Normal (wait for 3+ batch)
+        - Urgent (trigger next cron)
+        - Draft (skip in cron)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What should change?
+      description: Describe the expected behavior. You can paste screenshots or logs here.
+      placeholder: Example — Add a quick filter chip for pending items...
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Extra details or acceptance criteria (optional)
+      placeholder: Edge cases, UI notes, or references
+    validations:
+      required: false
